@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class OutputController {
   @PostMapping("/output")
-  public String postOutput(@RequestParam("inputText") String val, Model model) {
-    model.addAttribute("inputText", val);
+  public String postOutput(@RequestParam("inputText") String inputText, Model model) {
+    model.addAttribute("inputText", inputText);
     return "output";
   }
 
